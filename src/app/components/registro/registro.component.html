@@ -1,0 +1,30 @@
+<div>
+    <h1>REGISTRO</h1>
+    <br/>
+    <form #registroForm="ngForm">
+        <label class="form-label">
+            Nombre: 
+        </label>
+        <input class="form-control" type="text" name="cajanombre" #cajanombre />
+
+        <label class="form-label">
+            Email: 
+        </label>
+        <input class="form-control" type="text" name="cajaemail" #cajaemail />
+
+        <label class="form-label">
+            Contraseña: 
+        </label>
+        <input class="form-control" type="text" name="cajapassword" #cajapassword />
+
+        <label class="form-label">
+            Repetir contraseña: 
+        </label>
+        <input class="form-control" type="text" name="cajarepetir" #cajarepetir />
+
+
+        <button class="btn btn-secondary" (click)="registroUsuario()">
+            Registro
+        </button>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<div>
+    <table  class="table table-responsive table-warning"
+    >
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Modelo</th>
+                <th>marca</th>
+                <th>color</th>
+                <th>imagen</th>
+                <th>precio</th>
+                <th>valoracion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cubo of cubos">
+                <td>{{cubo.nombre}}</td>
+                <td>{{cubo.modelo}}</td>
+                <td>{{cubo.marca}}</td>
+                <td>{{cubo.color}}</td>
+                <td><img src="{{cubo.imagen}}" style="width: 150px;"  /></td>
+                <td>{{cubo.precio}}</td>
+                <td>{{cubo.valoracion}}</td>
+        </tbody>
+    </table>
+</div>
