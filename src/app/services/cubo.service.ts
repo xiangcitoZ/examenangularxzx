@@ -68,4 +68,15 @@ export class CuboService{
         return this._http.get(url);
 
     }
+
+    insertarPedido(id : number): Observable<any> {
+        var json = JSON.stringify(id);
+        var header = new HttpHeaders().set("Content-Type", "application/json");
+        var request = "/api/Compra/InsertarPedido/" + id;
+        var url = environment.urlApiCubo + request;
+
+        return this._http.post(url,json, {headers:header});
+    }
+
+
 }
