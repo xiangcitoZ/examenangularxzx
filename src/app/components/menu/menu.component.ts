@@ -18,7 +18,7 @@ export class MenuComponent {
   ) { }
   
   loadCubo() : void{
-    this._service.getCubo().subscribe(response =>{
+    this._service.getMarca().subscribe(response =>{
       this.cubos = response;
 
     });

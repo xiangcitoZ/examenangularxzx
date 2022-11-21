@@ -14,6 +14,7 @@ import { MarcacuboComponent } from './components/marcacubo/marcacubo.component';
 import { LoginComponent } from './components/login/login.component';
 import { PerfilesComponent } from './components/perfiles/perfiles.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     MarcacuboComponent,
        LoginComponent,
        PerfilesComponent,
-       RegistroComponent
+       RegistroComponent,
+       DetallesComponent
   ],
   imports: [
     BrowserModule,

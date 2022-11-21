@@ -41,8 +41,22 @@ export class CuboService{
 
     }
 
+    getMarca(): Observable<any>{
+        var request = "/api/Cubos/Marcas"
+        var url = environment.urlApiCubo + request;
+        return this._http.get(url);
+
+    }
+
     getCuboMarca(marca : string): Observable<any>{
         var request = "/api/Cubos/CubosMarca/"+marca
+        var url = environment.urlApiCubo + request;
+        return this._http.get(url);
+
+    }
+
+    getDetallesCubo(id : number): Observable<any>{
+        var request = "/api/Cubos/"+id
         var url = environment.urlApiCubo + request;
         return this._http.get(url);
 

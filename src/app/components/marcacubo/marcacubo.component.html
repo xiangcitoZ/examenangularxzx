@@ -1,5 +1,5 @@
 <div>
-    <h1 >Cubos de la marca </h1>
+    <h1 >Cubos de la marca  <span style="color:blue">{{marca}}</span> </h1>
     <table  class="table table-responsive table-warning">
         <thead>
             <tr>
@@ -10,6 +10,7 @@
                 <th>imagen</th>
                 <th>precio</th>
                 <th>valoracion</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -21,24 +22,14 @@
                 <td><img src="{{cubo.imagen}}" style="width: 150px;"  /></td>
                 <td>{{cubo.precio}}</td>
                 <td>{{cubo.valoracion}}</td>
+                <td >
+                    <a class="btn btn-outline-dark"   [routerLink]="['/detalles' , cubo.idCubo]">
+                    Detalles
+                    
+                    </a>
+                </td>
         </tbody>
     </table>
     <br/>
-    <h1>Comentarios</h1>
-    <br/>
-    <table  class="table table-responsive table-warning">
-        <thead>
-            <tr>
-                <th>Comentario</th>
-                <th>Fecha</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let com of comentarios">
-                <td>{{com.comentario}}</td>
-                <td>{{com.fechaComentario}}</td>
-                
-        </tbody>
-    </table>
+    
 </div>
